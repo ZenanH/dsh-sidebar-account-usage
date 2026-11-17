@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Sidebar account usage",
+    "description": "Shows the DeepSeek account balance, today's spend, and whether the current pricing window is peak or off-peak above the sidebar account row."
+  }
+}

@@ -1,0 +1,3 @@
+- insert:
+    - id: sidebar-account-usage
+      name: 'dsh-sidebar-account-usage'

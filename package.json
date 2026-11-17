@@ -1,0 +1,53 @@
+{
+  "name": "dsh-sidebar-account-usage",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Shows the DeepSeek account balance, today's spend, and the current peak/off-peak pricing window above the sidebar account row.",
+  "license": "MIT",
+  "author": "ZenanH",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZenanH/dsh-sidebar-account-usage.git"
+  },
+  "homepage": "https://github.com/ZenanH/dsh-sidebar-account-usage#readme",
+  "bugs": {
+    "url": "https://github.com/ZenanH/dsh-sidebar-account-usage/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek",
+    "harness",
+    "sidebar",
+    "account",
+    "balance",
+    "usage",
+    "pricing"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
